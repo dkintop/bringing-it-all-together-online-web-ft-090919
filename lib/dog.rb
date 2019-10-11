@@ -42,7 +42,7 @@ attr_accessor :id, :name, :breed
   end 
   
   def self.new_from_db(row) 
-    
+    self.
   end 
   
     
