@@ -65,7 +65,10 @@ attr_accessor :id, :name, :breed
       SELECT * FROM dogs 
       WHERE name = ?, breed = ?
     SQL
-    DB[:conn].execute(sql, attr_hash[:name], attr_hash[:breed])
+    dog_row = DB[:conn].execute(sql, attr_hash[:name], attr_hash[:breed])
+    
+    if dog_row
+      
     
   end 
   
