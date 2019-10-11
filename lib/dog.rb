@@ -62,8 +62,11 @@ attr_accessor :id, :name, :breed
   
   def self.find_or_create_by(attr_hash)
     sql = <<-SQL
-    SELECT * FROM dogs 
-    WHERE name = ?, breed = ?
+      SELECT * FROM dogs 
+      WHERE name = ?, breed = ?
+    SQL
+    DB[:conn].execute(sql, attr_hash[:name], attr_hash[:breed])
+    
   end 
   
     
