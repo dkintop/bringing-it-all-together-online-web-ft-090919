@@ -56,8 +56,7 @@ attr_accessor :id, :name, :breed
       WHERE id = ?
     SQL
     row = DB[:conn].execute(sql, id)
-    dog = Dog.new_from_db(row)
-    dog
+    
   end 
   
     
