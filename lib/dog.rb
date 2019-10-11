@@ -24,17 +24,20 @@ attr_accessor :id, :name, :breed
   
   def save
   sql = <<-SQL
-  INSERT INTO dogs(name, breed)
-  VALUES(?, ?)
+    INSERT INTO dogs(name, breed)
+    VALUES(?, ?)
   SQL
   
   sql2 = <<-SQL 
-  SELECT id FROM dogs
+    SELECT id FROM dogs
   SQL
   DB[:conn].execute(sql, self.name, self.breed)
   @id = DB[:conn].execute(sql2).last[0]
-  
   self
   end
+  
+  def self.create(attributes)
+    
+  end 
     
 end 
