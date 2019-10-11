@@ -25,6 +25,7 @@ attr_accessor :id, :name, :breed
   def save
   sql = <<-SQL
   INSERT INTO dogs(name, breed)
+  VALUES(?, ?)
   end
     
 end 
