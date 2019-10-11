@@ -37,7 +37,7 @@ attr_accessor :id, :name, :breed
   end
   
   def self.create(attributes)
-    
+    new_dog = Dog.new
   end 
     
 end 
