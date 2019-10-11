@@ -3,8 +3,8 @@ class Dog
   
 attr_accessor :id, :name, :breed 
 
-  def initialize(attributes)
-    attributes.each {|key, value| self.send(("#{key}="), value)}
+  def initialize(attributes_hash)
+    attributes_hash.each {|key, value| self.send(("#{key}="), value)}
     self.id ||= nil
   end
   
@@ -42,9 +42,12 @@ attr_accessor :id, :name, :breed
   end 
   
   def self.new_from_db(row) 
-    attributes = {
-      id = 
+  attributes= {
+    :id => row[0]
+    :name => row[1]
+    :breed => row[2]
     }
+    new_dog = Dog.new(attributes)
   end 
   
     
