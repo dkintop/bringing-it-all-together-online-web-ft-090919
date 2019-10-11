@@ -69,7 +69,7 @@ attr_accessor :id, :name, :breed
     
     if dog_row
       dog = Dog.new_from_db(dog_row)
-      binding.pry
+      
     end
   end 
   
