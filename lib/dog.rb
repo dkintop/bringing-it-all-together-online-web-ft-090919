@@ -72,7 +72,6 @@ attr_accessor :id, :name, :breed
       dog = self.create({:name => attr_hash[:name], :breed => attr_hash[:breed]})
     end 
     dog
-      
   end 
   
     
