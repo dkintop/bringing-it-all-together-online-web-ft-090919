@@ -43,8 +43,8 @@ attr_accessor :id, :name, :breed
   
   def self.new_from_db(row) 
   attributes= {
-    :id => row[0]
-    :name => row[1]
+    :id => row[0],
+    :name => row[1],
     :breed => row[2]
     }
     new_dog = Dog.new(attributes)
