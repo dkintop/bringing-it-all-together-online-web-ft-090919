@@ -66,7 +66,7 @@ attr_accessor :id, :name, :breed
       WHERE name = ?, breed = ?
     SQL
     dog_row = DB[:conn].execute(sql, attr_hash[:name], attr_hash[:breed])
-    
+    binding.pry
     if dog_row
       dog = Dog.new_from_db(dog_row)
       
