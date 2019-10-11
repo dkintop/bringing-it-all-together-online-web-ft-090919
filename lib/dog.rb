@@ -33,7 +33,7 @@ attr_accessor :id, :name, :breed
   SQL
   DB[:conn].execute(sql, self.name, self.breed)
   @id = DB[:conn].execute(sql2).last
-  binding.pry
+  
   self
   end
     
