@@ -32,7 +32,7 @@ attr_accessor :id, :name, :breed
   SELECT id FROM dogs
   SQL
   DB[:conn].execute(sql, self.name, self.breed)
-  @id = DB[:conn].execute(sql2).last
+  @id = DB[:conn].execute(sql2).last[0]
   
   self
   end
