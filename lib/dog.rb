@@ -83,7 +83,8 @@ attr_accessor :id, :name, :breed
     WHERE name = ?
     SQL
     dog_row = DB[:conn].execute(sql, name).first  
-    binding.pry
+    dog = Dog.new_from_db(dog_row)
+    dog
   end 
   
     
