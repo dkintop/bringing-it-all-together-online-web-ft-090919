@@ -19,7 +19,7 @@ attr_accessor :id, :name, :breed
   end
   
   def self.drop_table
-    DB[:conn].execute(DROP TABLE dogs)
+    DB[:conn].execute("DROP TABLE dogs")
   end
     
 end 
