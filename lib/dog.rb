@@ -29,9 +29,11 @@ attr_accessor :id, :name, :breed
   SQL
   
   sql2 = <<-SQL 
-  SELECT id 
+  SELECT id FROM dogs
+  SQL
   DB[:conn].execute(sql, self.name, self.breed)
-  @id = DB[:conn].execute
+  @id = DB[:conn].execute(sql2).last
+  binding.pry
   self
   end
     
