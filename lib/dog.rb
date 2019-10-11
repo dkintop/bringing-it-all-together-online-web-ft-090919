@@ -4,7 +4,7 @@ class Dog
 attr_accessor :id, :name, :breed 
 
 def initialize(hash)
-  attributes.each 
+  hash.each 
   binding.pry
 end
   
