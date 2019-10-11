@@ -1,8 +1,8 @@
 class Dog 
   
-attr_accessor :name, :breed 
+attr_accessor :id, :name, :breed 
 
-def initialize(hash)
+def initialize(id:, name:, breed:)
   
 end
   
