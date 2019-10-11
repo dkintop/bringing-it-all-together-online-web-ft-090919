@@ -5,7 +5,8 @@ attr_accessor :id, :name, :breed
 
 def initialize(hash)
   hash.each do |key, value|
-  binding.pry
+    binding.pry
+  end 
 end
   
 end 
