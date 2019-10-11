@@ -27,8 +27,11 @@ attr_accessor :id, :name, :breed
   INSERT INTO dogs(name, breed)
   VALUES(?, ?)
   SQL
+  
+  sql2 = <<-SQL 
+  SELECT id 
   DB[:conn].execute(sql, self.name, self.breed)
-  @id = 
+  @id = DB[:conn].execute
   self
   end
     
