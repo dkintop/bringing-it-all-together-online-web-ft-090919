@@ -40,5 +40,10 @@ attr_accessor :id, :name, :breed
     new_dog = Dog.new(attributes)
     new_dog.save
   end 
+  
+  def self.new_from_db(row) 
+    binding.pry
+  end 
+  
     
 end 
