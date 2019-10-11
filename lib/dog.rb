@@ -69,7 +69,9 @@ attr_accessor :id, :name, :breed
     if dog_row
       dog = Dog.new_from_db(dog_row)
     else
-      
+      dog = self.create({:name => attr_hash[:name], :breed => attr_hash[:breed]})
+    end 
+    dog
       
     end
   end 
