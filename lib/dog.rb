@@ -68,6 +68,8 @@ attr_accessor :id, :name, :breed
     dog_row = DB[:conn].execute(sql, attr_hash[:name], attr_hash[:breed])
     if dog_row
       dog = Dog.new_from_db(dog_row)
+    else
+      
       
     end
   end 
