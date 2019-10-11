@@ -8,6 +8,6 @@ attr_accessor :id, :name, :breed
     self.id ||= nil
   end
   
-  
+  def self.create_table
   
 end 
