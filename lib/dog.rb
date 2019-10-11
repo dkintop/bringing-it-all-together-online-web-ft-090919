@@ -82,7 +82,7 @@ attr_accessor :id, :name, :breed
     SELECT * FROM dogs 
     WHERE name = ?
     SQL
-    DB[:conn].execute(sql, name)  
+    dog_row = DB[:conn].execute(sql, name)  
     binding.pry
   end 
   
