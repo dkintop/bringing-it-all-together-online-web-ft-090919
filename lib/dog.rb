@@ -60,8 +60,8 @@ attr_accessor :id, :name, :breed
     end.first
   end 
   
-  def self.find_or_create_by(arg)
-    binding.pry
+  def self.find_or_create_by(attr_hash)
+    
   end 
   
     
