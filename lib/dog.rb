@@ -50,5 +50,9 @@ attr_accessor :id, :name, :breed
     new_dog = Dog.new(attributes)
   end 
   
+  def self.find_by_id 
+    
+  end 
+  
     
 end 
