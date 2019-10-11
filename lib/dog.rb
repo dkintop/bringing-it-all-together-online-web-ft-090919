@@ -87,5 +87,10 @@ attr_accessor :id, :name, :breed
     dog
   end 
   
+  def update
+    
+  end 
+  
+  
     
 end 
